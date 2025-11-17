@@ -31,6 +31,23 @@ public partial class MainPage : ContentPage
         
     }
 
+    private void OnClearEntryPressed(object? sender, EventArgs e)
+    {
+        string currentText = Display.Text;
+        if (currentText.Length > 1)
+        {
+            string newText = currentText.Substring(1, currentText.Length - 1);
+            Display.Text = newText;
+        }
+        else
+        {
+            Display.Text = "";
+            isFirstNumberAfterOperator = true;
+        }
+        
+
+    }
+   
     private void OnOperatorPressed(object? sender, EventArgs e)
     {
         Button pressedButton = sender as Button;
