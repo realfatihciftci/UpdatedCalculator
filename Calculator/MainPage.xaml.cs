@@ -44,10 +44,17 @@ public partial class MainPage : ContentPage
             Display.Text = "";
             isFirstNumberAfterOperator = true;
         }
-        
 
     }
-   
+
+    private void OnClearPressed(object? sender, EventArgs e)
+    {
+        Display.Text = "";
+        firstNumber = 0;
+        secondNumber = 0;
+        currentOperator = "";
+        isFirstNumberAfterOperator = true;
+    }
     private void OnOperatorPressed(object? sender, EventArgs e)
     {
         Button pressedButton = sender as Button;
