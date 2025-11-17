@@ -36,7 +36,7 @@ public partial class MainPage : ContentPage
         string currentText = Display.Text;
         if (currentText.Length > 1)
         {
-            string newText = currentText.Substring(1, currentText.Length - 1);
+            string newText = currentText.Substring(0, currentText.Length - 1);
             Display.Text = newText;
         }
         else
