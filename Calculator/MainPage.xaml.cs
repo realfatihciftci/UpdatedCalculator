@@ -61,7 +61,7 @@ public partial class MainPage : ContentPage
 
     private void OnClearPressed(object? sender, EventArgs e)
     {
-        Display.Text = "";
+        Display.Text = "0";
         firstNumber = 0;
         secondNumber = 0;
         currentOperator = "";
@@ -81,13 +81,13 @@ public partial class MainPage : ContentPage
         if (currentOperator == "")
         {
             currentOperator = pressedButton.Text;
-            firstNumber = Double.Parse(Display.Text);
+            firstNumber = Double.Parse(Display.Text, CultureInfo.InvariantCulture);
           
         }
         else
         {
             
-            secondNumber = Double.Parse(Display.Text);
+            secondNumber = Double.Parse(Display.Text, CultureInfo.InvariantCulture);
             double result=0;
             switch (currentOperator)
             {
