@@ -31,6 +31,18 @@ public partial class MainPage : ContentPage
         
     }
 
+    private void OnDecimalPressed(object? sender, EventArgs e)
+    {
+        if (isFirstNumberAfterOperator)
+        {
+            Display.Text = "0.";
+            isFirstNumberAfterOperator = false;
+        }
+        else if (!Display.Text.Contains("."))
+        {
+            Display.Text = Display.Text + ".";
+        }
+    }
     private void OnClearEntryPressed(object? sender, EventArgs e)
     {
         string currentText = Display.Text;
