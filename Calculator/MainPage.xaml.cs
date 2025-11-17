@@ -1,5 +1,5 @@
 ﻿namespace Calculator;
-
+using System.Globalization;
 public partial class MainPage : ContentPage
 {
     private double firstNumber = 0;
