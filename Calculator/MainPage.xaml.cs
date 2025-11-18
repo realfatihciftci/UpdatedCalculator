@@ -59,6 +59,19 @@ public partial class MainPage : ContentPage
 
     }
 
+    private void OnSquarePressed(object? sender, EventArgs e)
+    {
+        double currentNumber = double.Parse(Display.Text);
+        
+        double result = currentNumber * currentNumber;
+        
+        Display.Text = result.ToString();
+        
+        isFirstNumberAfterOperator = false;
+        
+    }
+
+    
     private void OnClearPressed(object? sender, EventArgs e)
     {
         Display.Text = "0";
