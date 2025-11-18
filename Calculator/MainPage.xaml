@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.MainPage">
-
-   <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" RowSpacing="5" Padding="5">
+             x:Class="Calculator.MainPage"
+             BackgroundColor="#1C1C1E">
+    
+    
+    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" RowSpacing="5" Padding="5">
        
        <Grid.RowDefinitions>
            <RowDefinition Height="*"></RowDefinition>
@@ -16,12 +18,12 @@
            
            
        </Grid.RowDefinitions>
-       <Button x:Name="ClearEntryButton" Clicked="OnClearEntryPressed" Text="CE" Grid.Row="2" Grid.Column="0" ></Button>
+       <Button x:Name="ClearEntryButton" Clicked="OnClearEntryPressed" Text="CE" Grid.Row="2" Grid.Column="0"  ></Button>
        <Button x:Name="ClearButton" Clicked="OnClearPressed" Text="C" Grid.Row="2" Grid.Column="1" ></Button>
-       <Button x:Name="NumberOperatorButtonPercent"  Text="%" Grid.Row="2" Grid.Column="2" ></Button>
-       <Button x:Name="NumberOperatorButtonRoot"  Text="√" Grid.Row="2" Grid.Column="3" ></Button>
+       <Button x:Name="NumberOperatorButtonPercent" Clicked="OnSquarePressed" Text="x²" Grid.Row="2" Grid.Column="2" ></Button>
+       <Button x:Name="NumberOperatorButtonRoot" Clicked="OnRootPressed" Text="√" Grid.Row="2" Grid.Column="3" ></Button>
        
-       <Entry x:Name="Display" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" ></Entry>
+       <Entry x:Name="Display" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" TextColor="White" ></Entry>
        <Button x:Name="NumberButton7" Clicked="OnNumberPressed" Text="7" Grid.Row="3" Grid.Column="0"></Button>
        <Button x:Name="NumberButton8" Clicked="OnNumberPressed" Text="8" Grid.Row="3" Grid.Column="1"></Button>
        <Button x:Name="NumberButton9" Clicked="OnNumberPressed" Text="9" Grid.Row="3" Grid.Column="2"></Button>
@@ -38,7 +40,7 @@
        <Button x:Name="NumberOperatorButtonMultiply" Clicked="OnOperatorPressed" Text="*" Grid.Row="5" Grid.Column="3"></Button>
        
        <Button x:Name="NumberButton0" Clicked="OnNumberPressed" Text="0" Grid.Row="6" Grid.Column="1"></Button>
-       <Button x:Name="DotButton"  Text="." Grid.Row="6" Grid.Column="2"></Button>
+       <Button x:Name="DotButton" Clicked="OnDecimalPressed" Text="." Grid.Row="6" Grid.Column="2"></Button>
        <Button x:Name="OperatorButtonEqual" Clicked="OnOperatorPressed" Text="=" Grid.Row="6" Grid.Column="0" ></Button>
        <Button x:Name="NumberOperatorButtonDivide" Clicked="OnOperatorPressed" Text="/" Grid.Row="6" Grid.Column="3"></Button>
        
