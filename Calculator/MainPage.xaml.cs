@@ -62,7 +62,8 @@ public partial class MainPage : ContentPage
     private void OnSquarePressed(object? sender, EventArgs e)
     {
         double currentNumber = double.Parse(Display.Text, CultureInfo.InvariantCulture);
-        
+
+        HistoryLabel.Text = currentNumber.ToString(CultureInfo.InvariantCulture) + "²";
         double result = currentNumber * currentNumber;
         result = Math.Round(result, 10);
         Display.Text = result.ToString(CultureInfo.InvariantCulture);
@@ -72,7 +73,8 @@ public partial class MainPage : ContentPage
     private void OnRootPressed(object? sender, EventArgs e)
     {
         double currentNumber = double.Parse(Display.Text, CultureInfo.InvariantCulture);
-        
+
+        HistoryLabel.Text = "√(" + currentNumber.ToString(CultureInfo.InvariantCulture) + ")";
         double result = Math.Sqrt(currentNumber);
         result = Math.Round(result, 10);
         Display.Text = result.ToString(CultureInfo.InvariantCulture);
