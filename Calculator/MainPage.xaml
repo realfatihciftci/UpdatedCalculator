@@ -5,7 +5,7 @@
              BackgroundColor="#1C1C1E">
     
     
-    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" RowSpacing="5" Padding="5">
+    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" RowSpacing="5" Padding="5"  >
        
        <Grid.RowDefinitions>
            <RowDefinition Height="*"></RowDefinition>
@@ -18,31 +18,31 @@
            
            
        </Grid.RowDefinitions>
-       <Button x:Name="ClearEntryButton" Clicked="OnClearEntryPressed" Text="CE" Grid.Row="2" Grid.Column="0"  ></Button>
-       <Button x:Name="ClearButton" Clicked="OnClearPressed" Text="C" Grid.Row="2" Grid.Column="1" ></Button>
-       <Button x:Name="NumberOperatorButtonPercent" Clicked="OnSquarePressed" Text="x²" Grid.Row="2" Grid.Column="2" ></Button>
-       <Button x:Name="NumberOperatorButtonRoot" Clicked="OnRootPressed" Text="√" Grid.Row="2" Grid.Column="3" ></Button>
+       <Button x:Name="ClearEntryButton" Clicked="OnClearEntryPressed" Text="CE" Grid.Row="2" Grid.Column="0"  BackgroundColor="#7C8083" FontSize="24"></Button>
+       <Button x:Name="ClearButton" Clicked="OnClearPressed" Text="C" Grid.Row="2" Grid.Column="1" BackgroundColor="#7C8083" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonPercent" Clicked="OnSquarePressed" Text="x²" Grid.Row="2" Grid.Column="2" BackgroundColor="#7C8083" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonRoot" Clicked="OnRootPressed" Text="√" Grid.Row="2" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
-       <Entry x:Name="Display" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" TextColor="White" ></Entry>
-       <Button x:Name="NumberButton7" Clicked="OnNumberPressed" Text="7" Grid.Row="3" Grid.Column="0"></Button>
-       <Button x:Name="NumberButton8" Clicked="OnNumberPressed" Text="8" Grid.Row="3" Grid.Column="1"></Button>
-       <Button x:Name="NumberButton9" Clicked="OnNumberPressed" Text="9" Grid.Row="3" Grid.Column="2"></Button>
-       <Button x:Name="NumberOperatorButtonAdd" Clicked="OnOperatorPressed" Text="+" Grid.Row="3" Grid.Column="3"></Button>
+       <Entry x:Name="Display" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" TextColor="White" FontSize="30" ></Entry>
+       <Button x:Name="NumberButton7" Clicked="OnNumberPressed" Text="7" Grid.Row="3" Grid.Column="0" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberButton8" Clicked="OnNumberPressed" Text="8" Grid.Row="3" Grid.Column="1" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberButton9" Clicked="OnNumberPressed" Text="9" Grid.Row="3" Grid.Column="2" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonAdd" Clicked="OnOperatorPressed" Text="+" Grid.Row="3" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
-       <Button x:Name="NumberButton4" Clicked="OnNumberPressed" Text="4" Grid.Row="4" Grid.Column="0"></Button>
-       <Button x:Name="NumberButton5" Clicked="OnNumberPressed" Text="5" Grid.Row="4" Grid.Column="1"></Button>
-       <Button x:Name="NumberButton6" Clicked="OnNumberPressed" Text="6" Grid.Row="4" Grid.Column="2"></Button>
-       <Button x:Name="NumberOperatorButtonSubtract" Clicked="OnOperatorPressed" Text="-" Grid.Row="4" Grid.Column="3"></Button>
+       <Button x:Name="NumberButton4" Clicked="OnNumberPressed" Text="4" Grid.Row="4" Grid.Column="0" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberButton5" Clicked="OnNumberPressed" Text="5" Grid.Row="4" Grid.Column="1" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberButton6" Clicked="OnNumberPressed" Text="6" Grid.Row="4" Grid.Column="2" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonSubtract" Clicked="OnOperatorPressed" Text="-" Grid.Row="4" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
-       <Button x:Name="NumberButton1" Clicked="OnNumberPressed" Text="1" Grid.Row="5" Grid.Column="0"></Button>
-       <Button x:Name="NumberButton2" Clicked="OnNumberPressed" Text="2" Grid.Row="5" Grid.Column="1"></Button>
-       <Button x:Name="NumberButton3" Clicked="OnNumberPressed" Text="3" Grid.Row="5" Grid.Column="2"></Button>
-       <Button x:Name="NumberOperatorButtonMultiply" Clicked="OnOperatorPressed" Text="*" Grid.Row="5" Grid.Column="3"></Button>
+       <Button x:Name="NumberButton1" Clicked="OnNumberPressed" Text="1" Grid.Row="5" Grid.Column="0" BackgroundColor="#61696B" FontSize="24" ></Button>
+       <Button x:Name="NumberButton2" Clicked="OnNumberPressed" Text="2" Grid.Row="5" Grid.Column="1" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberButton3" Clicked="OnNumberPressed" Text="3" Grid.Row="5" Grid.Column="2" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonMultiply" Clicked="OnOperatorPressed" Text="*" Grid.Row="5" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
-       <Button x:Name="NumberButton0" Clicked="OnNumberPressed" Text="0" Grid.Row="6" Grid.Column="1"></Button>
-       <Button x:Name="DotButton" Clicked="OnDecimalPressed" Text="." Grid.Row="6" Grid.Column="2"></Button>
-       <Button x:Name="OperatorButtonEqual" Clicked="OnOperatorPressed" Text="=" Grid.Row="6" Grid.Column="0" ></Button>
-       <Button x:Name="NumberOperatorButtonDivide" Clicked="OnOperatorPressed" Text="/" Grid.Row="6" Grid.Column="3"></Button>
+       <Button x:Name="NumberButton0" Clicked="OnNumberPressed" Text="0" Grid.Row="6" Grid.Column="1" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="DotButton" Clicked="OnDecimalPressed" Text="." Grid.Row="6" Grid.Column="2" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="OperatorButtonEqual" Clicked="OnOperatorPressed" Text="=" Grid.Row="6" Grid.Column="0" BackgroundColor="#61696B" FontSize="24"></Button>
+       <Button x:Name="NumberOperatorButtonDivide" Clicked="OnOperatorPressed" Text="/" Grid.Row="6" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
        
    </Grid>
