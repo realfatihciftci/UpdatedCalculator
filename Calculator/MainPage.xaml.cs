@@ -66,13 +66,17 @@ public partial class MainPage : ContentPage
         double result = currentNumber * currentNumber;
         result = Math.Round(result, 10);
         Display.Text = result.ToString(CultureInfo.InvariantCulture);
-        
         isFirstNumberAfterOperator = false;
         
     }
     private void OnRootPressed(object? sender, EventArgs e)
     {
-        double currentNumber = 1.0;
+        double currentNumber = double.Parse(Display.Text, CultureInfo.InvariantCulture);
+        
+        double result = Math.Sqrt(currentNumber);
+        result = Math.Round(result, 10);
+        Display.Text = result.ToString(CultureInfo.InvariantCulture);
+        isFirstNumberAfterOperator = false;
     }
     
     private void OnClearPressed(object? sender, EventArgs e)
