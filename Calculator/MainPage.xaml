@@ -23,6 +23,7 @@
        <Button x:Name="NumberOperatorButtonPercent" Clicked="OnSquarePressed" Text="x²" Grid.Row="2" Grid.Column="2" BackgroundColor="#7C8083" FontSize="24"></Button>
        <Button x:Name="NumberOperatorButtonRoot" Clicked="OnRootPressed" Text="√" Grid.Row="2" Grid.Column="3" BackgroundColor="#F19B38" FontSize="24"></Button>
        
+        <Label x:Name="HistoryLabel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" TextColor="#443E3E" FontSize="30"></Label>
        <Entry x:Name="Display" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" TextColor="White" FontSize="30" ></Entry>
        <Button x:Name="NumberButton7" Clicked="OnNumberPressed" Text="7" Grid.Row="3" Grid.Column="0" BackgroundColor="#61696B" FontSize="24"></Button>
        <Button x:Name="NumberButton8" Clicked="OnNumberPressed" Text="8" Grid.Row="3" Grid.Column="1" BackgroundColor="#61696B" FontSize="24"></Button>
