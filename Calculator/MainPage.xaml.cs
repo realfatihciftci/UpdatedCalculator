@@ -82,6 +82,7 @@ public partial class MainPage : ContentPage
     private void OnClearPressed(object? sender, EventArgs e)
     {
         Display.Text = "0";
+        HistoryLabel.Text = "";
         firstNumber = 0;
         secondNumber = 0;
         currentOperator = "";
@@ -102,7 +103,10 @@ public partial class MainPage : ContentPage
         {
             currentOperator = pressedButton.Text;
             firstNumber = Double.Parse(Display.Text, CultureInfo.InvariantCulture);
-          
+            if (pressedButton.Text != "=")
+            {
+                HistoryLabel.Text = Display.Text + " " + currentOperator;
+            }
         }
         else
         {
@@ -119,7 +123,15 @@ public partial class MainPage : ContentPage
                 
             }
 
-            Display.Text = result.ToString();
+            Display.Text = result.ToString(CultureInfo.InvariantCulture);
+            if (pressedButton.Text == "=")
+            {
+                HistoryLabel.Text = firstNumber + currentOperator + secondNumber;
+            }
+            else
+            {
+                HistoryLabel.Text =result + "" + pressedButton.Text;
+            }
             currentOperator = pressedButton.Text;
             if(pressedButton.Text == "=") currentOperator = "";
             firstNumber = result;
