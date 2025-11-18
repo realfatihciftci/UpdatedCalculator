@@ -61,16 +61,19 @@ public partial class MainPage : ContentPage
 
     private void OnSquarePressed(object? sender, EventArgs e)
     {
-        double currentNumber = double.Parse(Display.Text);
+        double currentNumber = double.Parse(Display.Text, CultureInfo.InvariantCulture);
         
         double result = currentNumber * currentNumber;
-        
-        Display.Text = result.ToString();
+        result = Math.Round(result, 10);
+        Display.Text = result.ToString(CultureInfo.InvariantCulture);
         
         isFirstNumberAfterOperator = false;
         
     }
-
+    private void OnRootPressed(object? sender, EventArgs e)
+    {
+        double currentNumber = 1.0;
+    }
     
     private void OnClearPressed(object? sender, EventArgs e)
     {
